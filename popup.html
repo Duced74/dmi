@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DMI Serial Extractor</title>
+    <style>
+        body {
+            width: 350px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        h3 {
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 60px;
+            margin: 10px 0;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #extract {
+            background-color: #28a745;
+            color: white;
+        }
+        #clear {
+            background-color: #dc3545;
+            color: white;
+        }
+        #result {
+            margin: 10px 0;
+            padding: 8px;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .debug {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            font-size: 12px;
+            max-height: 100px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+        }
+        .debug-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #495057;
+        }
+        .debug-line {
+            margin: 2px 0;
+            color: #6c757d;
+        }
+        .debug-line.success {
+            color: #28a745;
+        }
+        .debug-line.error {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h3>⚡ DMI Serial Extractor</h3>
+
+    <textarea id="input" placeholder="Scannez votre code DMI..."></textarea>
+
+    <button id="extract">Extraire le numéro de série</button>
+    <button id="clear">Effacer</button>
+
+    <div id="result"></div>
+
+    <div class="debug">
+        <div class="debug-title">🔍 Logs de débogage :</div>
+        <div id="debug-log"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

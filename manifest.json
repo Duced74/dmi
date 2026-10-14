@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "DMI Serial Extractor",
+  "version": "1.0",
+  "description": "Extraire automatiquement les numéros de série DMI après le code 21 ou (21) et les copier dans le presse-papiers.",
+  "permissions": ["clipboardWrite"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon48.png"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "96": "icon96.png"
+  }
+}
